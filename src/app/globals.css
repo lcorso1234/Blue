@@ -59,26 +59,47 @@ body {
 
 @keyframes jiggle-alert {
   0%,
-  40%,
+  60%,
   100% {
-    transform: translateX(0);
+    transform: translateX(0) rotate(0deg) scale(1);
   }
   5% {
-    transform: translateX(-4px) rotate(-1deg);
+    transform: translateX(-4px) rotate(-1deg) scale(1.01);
   }
   10% {
-    transform: translateX(4px) rotate(1deg);
+    transform: translateX(4px) rotate(1deg) scale(1.02);
   }
   15% {
-    transform: translateX(-3px) rotate(-1deg);
+    transform: translateX(-3px) rotate(-1deg) scale(1.01);
   }
   20% {
-    transform: translateX(3px) rotate(1deg);
+    transform: translateX(3px) rotate(1deg) scale(1.02);
+  }
+  25% {
+    transform: translateX(-2px) rotate(-0.5deg) scale(1.01);
+  }
+  30% {
+    transform: translateX(2px) rotate(0.5deg) scale(1.01);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow:
+      0 12px 30px rgba(255, 253, 1, 0.45),
+      inset 0 1px 0 rgba(255, 253, 1, 0.8);
+  }
+  100% {
+    box-shadow:
+      0 18px 40px rgba(255, 253, 1, 0.7),
+      inset 0 1px 0 rgba(255, 253, 1, 0.95);
   }
 }
 
 .jiggle-alert {
-  animation: jiggle-alert 2.4s ease-in-out infinite;
+  animation:
+    jiggle-alert 2.4s ease-in-out infinite,
+    pulse-glow 3s ease-in-out infinite alternate;
   transform-origin: center;
 }
 

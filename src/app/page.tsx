@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const VCARD_CONTENT = `BEGIN:VCARD
 VERSION:3.0
-N:Ministrees;Blue Sun;;;
-FN:Blue Sun Ministrees
+N:Toomey;Shaun;;;
+FN:Shaun Toomey
 ORG:Blue Sun Ministrees
 TEL;TYPE=CELL:+16307283463
 END:VCARD`;
