@@ -24,17 +24,8 @@ export default function Home() {
   };
 
   return (
-    <div className="noise-bg relative flex min-h-screen items-center justify-center px-6 py-12 font-sans text-[#FFFD01]">
-      <div
-        className="business-card w-full max-w-md overflow-hidden rounded-3xl border p-10 text-base backdrop-blur-3xl"
-        style={{
-          borderColor: "rgba(255, 253, 1, 0.25)",
-          background:
-            "linear-gradient(145deg, rgba(33, 89, 231, 0.35), rgba(255, 253, 1, 0.1))",
-          boxShadow:
-            "0 40px 120px rgba(33, 89, 231, 0.8), inset 0 -1px 20px rgba(255, 253, 1, 0.08)",
-        }}
-      >
+    <div className="noise-bg relative flex min-h-screen items-center justify-center px-6 py-12 font-sans text-white">
+      <div className="business-card glass-card w-full max-w-md overflow-hidden rounded-3xl border border-white/10 p-10 text-base backdrop-blur-3xl">
         <div className="flex items-center gap-6">
           <div
             className="flex h-28 w-28 items-center justify-center rounded-[36px]"
@@ -55,19 +46,19 @@ export default function Home() {
             />
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#FFFD01] opacity-80">
+            <p className="text-xs uppercase tracking-[0.35em] text-[#FFFD01] opacity-90">
               Blue Sun
             </p>
-            <h1 className="text-3xl font-semibold tracking-tight text-[#FFFD01]">
+            <h1 className="text-3xl font-semibold tracking-tight text-white">
               Ministrees
             </h1>
           </div>
         </div>
 
-        <div className="mt-8 space-y-4 text-sm leading-relaxed text-[#FFFD01]">
-          <p className="text-white font-semibold">
-            In the Bible they say a man&apos;s life should be 120 years. But in
-            Isaiah they say a man&apos;s life should be as long as the life of a
+        <div className="mt-8 space-y-4 text-sm leading-relaxed text-white">
+          <p className="font-semibold">
+            In the bible it says a man&apos;s life should be 120 years and
+ man&apos;s life is as long as the life of a
             tree.
           </p>
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-white">
@@ -75,23 +66,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div
-          className="mt-8 border-t pt-6 text-sm text-[#FFFD01]"
-          style={{ borderColor: "rgba(255, 253, 1, 0.2)" }}
-        >
-          <p className="text-xs uppercase tracking-[0.45em] text-[#FFFD01] opacity-70">
+        <div className="mt-8 border-t border-white/10 pt-6 text-sm text-white">
+          <p className="text-xs uppercase tracking-[0.45em] text-white/70">
             Contact
           </p>
-          <p className="mt-2 text-lg font-semibold text-[#FFFD01]">
-            630.728.3463
-          </p>
+          <p className="mt-2 text-lg font-semibold text-white">630.728.3463</p>
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-6">
           <button
             type="button"
             onClick={handleSaveContact}
-            className="jiggle-alert flex-1 rounded-2xl px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            className="jiggle-alert w-full rounded-2xl px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             style={{
               background:
                 "linear-gradient(135deg, rgba(255, 253, 1, 0.95), rgba(255, 253, 1, 0.75))",
@@ -102,20 +88,6 @@ export default function Home() {
           >
             Save contact
           </button>
-          <a
-            href="tel:16307283463"
-            className="flex-1 rounded-2xl px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-            style={{
-              border: "1px solid rgba(255, 253, 1, 0.5)",
-              color: "#FFFD01",
-              background:
-                "linear-gradient(145deg, rgba(33, 89, 231, 0.2), rgba(33, 89, 231, 0.05))",
-              boxShadow:
-                "0 10px 25px rgba(33, 89, 231, 0.55), inset 0 1px 0 rgba(255, 253, 1, 0.2)",
-            }}
-          >
-            Call now
-          </a>
         </div>
       </div>
     </div>
