@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --blue: #2159e7;
+  --yellow: #fffd01;
+  --gunmetal: #2b3236;
+  --gunmetal-deep: #1a1e21;
+}
+
+@theme inline {
+  --color-background: var(--gunmetal);
+  --color-foreground: var(--yellow);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 0%, rgba(89, 96, 102, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(16, 18, 20, 0.5), transparent 55%),
+    var(--gunmetal);
+  color: var(--color-foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.noise-bg {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(160deg, var(--gunmetal), var(--gunmetal-deep));
+  overflow: hidden;
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.45);
+}
+
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  inset: -10% -20% 0 -20%;
+  background: radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.12), transparent 55%),
+    radial-gradient(circle at 85% 0%, rgba(0, 0, 0, 0.45), transparent 50%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.noise-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.business-card {
+  position: relative;
+}
+
+@keyframes jiggle-alert {
+  0%,
+  40%,
+  100% {
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-4px) rotate(-1deg);
+  }
+  10% {
+    transform: translateX(4px) rotate(1deg);
+  }
+  15% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  20% {
+    transform: translateX(3px) rotate(1deg);
+  }
+}
+
+.jiggle-alert {
+  animation: jiggle-alert 2.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@media (min-width: 640px) {
+  .jiggle-alert {
+    animation: none;
+  }
+}
