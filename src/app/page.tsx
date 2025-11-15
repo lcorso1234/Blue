@@ -57,8 +57,8 @@ export default function Home() {
 
         <div className="mt-8 space-y-4 text-sm leading-relaxed text-white">
           <p className="font-semibold">
-            In the bible it says a man&apos;s life should be 120 years and
- man&apos;s life is as long as the life of a
+            In the bible it says a man&apos;s life should be 120 years and also it says it could
+  as long as the life of a
             tree.
           </p>
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-white">
